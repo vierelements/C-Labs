@@ -1,0 +1,74 @@
+/* Student Name: Nichole Francoeur * Lab Assignments: Lab5_01
+* Project Name: Guessing Game
+* File Name:guessingGame.cpp
+* Description: Program generates a random number between 1 and 100, asks the user to guess the number.
+* Limitations or issues: n/a *
+* Credits: None
+*/
+
+#include <iostream>
+#include <cstdlib> // rand()
+#include <ctime> //local time
+using namespace std;
+
+int main()
+{
+      int randNum, guess, counter = 0; 
+      const int MAX_NUM = 100;
+
+      srand(time(0)); // initializing random number generator 
+      randNum = rand() % MAX_NUM + 1;
+      
+      // asking user for first guess
+      cout << "I'm thinking of a number between 1 and 100. Can you guess what it is ? " << endl << endl;
+      cin >> guess;
+      
+      // counts the guesses
+      while (counter >= 0)
+      {
+            ++counter;
+            
+            // checking guesses to the random number
+            if (guess < randNum) 
+            {
+                  cout << "No, that's too low." << endl;
+                  cout << "Guess again" << endl;
+                  cin >> guess;
+            }
+            else if (guess > randNum)
+            {
+                  cout << "Sorry, too high." << endl; 
+                  cout << "Guess again" << endl;
+                  cin >> guess;
+            } else 
+            {
+                  cout << "Congratulations! You guessed it!!" << endl;
+                  cout << "I was thinking of the number " << randNum << endl; 
+                  cout << "You got it right in " << counter << " guesses." <<endl; 
+                  break;
+             }
+      }
+      
+      system("pause");
+      return 0;
+}
+
+/* //Proof
+
+I'm thinking of a number between 1 and 100. Can you guess what it is? 50
+Sorry, too high.
+Guess again
+40
+Sorry, too high.
+Guess again
+30
+Sorry, too high.
+Guess again
+20
+Sorry, too high.
+Guess again
+10
+Sorry, too high.
+Guess again
+9
+Congratulations! You guessed it!! I was thinking of the number 9 You got it right in 6 guesses. Press any key to continue . . . */
