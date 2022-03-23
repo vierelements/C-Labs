@@ -1,0 +1,59 @@
+/* Student Name: Nichole Francoeur
+* Lab Assignments: Lab8_02
+* Project Name: Numeric Processing
+* File Name: numericProcessing.cpp
+* Description: Program that will open up the file random.txt and calculate and display:
+*   -number of numbers in the file.
+*     -sum of all the numbers in the file. 
+*     -average of all the numbers in the file.
+* Credits: None
+*/
+
+#include <iostream>
+#include<fstream> // to open file
+using namespace std;
+
+int main()
+{
+
+      int num = 0;
+      int lines = 0;
+      int sum = 0;
+      
+      //opening file
+      ifstream my_infile; 
+      my_infile.open("random.txt");
+      
+      if (my_infile)
+      {
+            // looping through file
+            while (my_infile >> num)
+            {
+                  //cout << num << endl;
+                  lines++;
+                  sum += num;
+            }
+            
+            //calculations
+            double average = sum / lines;
+            cout << "Number of numbers: " << lines << endl;
+            cout << "Sum of the numbers: " << sum << endl;
+            cout << "Average of the numbers: " << average << endl;
+            
+            // closing file
+            my_infile.close(); 
+      }
+      else 
+      {
+             // error message
+             cout << "There was an error opeing the file." << endl;
+      }
+      
+      system("pause");
+      return 0; }
+/*
+Proof
+Number of numbers: 200
+Sum of the numbers: 105527
+Average of the numbers: 527
+Press any key to continue . . . */
