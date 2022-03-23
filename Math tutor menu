@@ -1,0 +1,254 @@
+/*Student Name: Nichole Francoeur * Lab Assignments: Lab4_03
+* Project Name: Math Tutor Menu * File Name: mathTutorMenu.cpp
+* Description: Program that acts like a math tutor where a student can choose problems from a menu.
+* Limitations or issues: n/a
+* Credits: None
+*/
+
+#include <iostream>
+#include <cstdlib> // rand()
+#include <iomanip> //manipulators
+#include <ctime> // local time
+using namespace std;
+
+int main() 
+{
+      const int MAX_NUM = 500;
+      int sum, answer, choice, randNum1, randNum2, difference, product; 
+      double quotient;
+      
+      cout << "Menu" << endl;
+      cout << "1. Addition Problem" << endl;  
+      cout << "2. Subtraction Problem" << endl; 
+      cout << "3. Multiplication Problem" << endl; 
+      cout << "4. Division Problem" << endl;
+      cout << "5. Quit Program" << endl;
+      
+      cout << "Enter your choice (1-5): " << endl; 
+      cin >> choice;
+      
+      // initializing random number generator
+      srand(time(0));
+      
+      switch (choice)
+      {
+      case 1:
+             cout << "Your two random numbers are:  " << endl << endl;
+ 
+              // 1st random number
+              randNum1 = rand() % MAX_NUM + 1;
+              cout << setw(6) << randNum1 << endl;
+              
+              // 2nd random number
+              randNum2= rand() % 500 + 1;
+              cout << setw(6) << randNum2 << endl;
+              cout << setw(6) << "----" << endl << endl;
+              
+              // adding the two random numbers
+              sum = randNum1 + randNum2;
+  
+              // asking user for answer
+              cout << "What is the sum of these two random numbers? " << endl <<
+              cin >> answer;
+  
+              // checking if the user's answer matches
+              if (sum == answer)
+              {
+                   cout << "Congratulations! Thats right!" << endl;
+               }
+              else 
+              {
+                    cout << " Try again" << endl;
+               }
+               break;
+          case 2:
+                cout << "Your two random numbers are:  " << endl << endl;
+
+                // 1st random number
+                randNum1 = rand() % MAX_NUM + 1; 
+                cout << setw(6) << randNum1 << endl;
+
+                // 2nd random number
+                randNum2 = rand() % 500 + 1;
+                cout << setw(6) << randNum2 << endl;
+                cout << setw(6) << "----" << endl << endl;
+                
+                // subtracting the two random numbers 
+                difference = randNum1 - randNum2;
+                
+                // asking user for answer
+                cout << "What is the difference of these two random numbers? " << endl << endl;
+      
+                cin >> answer;
+                
+                // checking if the user's answer matches
+                if (difference == answer)
+                {
+                     cout << "Congratulations! Thats right!" << endl;
+                }
+                else 
+                {
+                    cout << " Try again" << endl;
+                }
+                break; 
+          case 3:
+                cout << "Your two random numbers are:  " << endl << endl;
+                
+                // 1st random number
+                randNum1 = rand() % MAX_NUM + 1; 
+                cout << setw(6) << randNum1 << endl;
+                
+                // 2nd random number
+                randNum2 = rand() % 500 + 1;
+                cout << setw(6) << randNum2 << endl;
+                cout << setw(6) << "----" << endl << endl;
+                
+                // multiplying the two random numbers
+                product = randNum1 * randNum2;
+                
+                // asking user for answer
+                cout << "What is the product of these two random numbers? " << endl << endl;
+                cin >> answer;
+                
+                // checking if the user's answer matches
+                if (product == answer)  
+                 {
+                      cout << "Congratulations! Thats right!" << endl;
+                 } else 
+                 {
+                      cout << " Try again" << endl;
+                  }
+                  break;
+            case 4:
+                  cout << "Your two random numbers are:  " << endl << endl;
+
+                  // 1st random number
+                  randNum1 = rand() % MAX_NUM + 1; cout << setw(6) << randNum1 << endl;
+
+                   // 2nd random number
+                   randNum2 = rand() % 500 + 1;
+                   cout << setw(6) << randNum2 << endl;
+                   cout << setw(6) << "----" << endl << endl;
+                   
+                   // quotient the two random numbers
+                  quotient = randNum1 / randNum2;
+           
+                  // asking user for answer
+                  cout << "What is the quotient of these two random numbers? " << endl << endl;
+                  cin >> answer;
+                  
+                   // checking if the user's answer matches
+                   if (quotient == answer)
+                   {
+                       cout << "Congratulations! Thats right!" << endl;
+                   } else 
+                   {
+                       cout << " Try again" << endl;
+                   }
+                   break;
+             default:
+                   cout << "Ending the program." << endl;
+             }
+             system("pause");
+             return 0; 
+}
+
+/*
+//Proof 1
+Menu
+1. Addition Problem
+2. Subtraction Problem
+3. Multiplication Problem
+4. Division Problem
+5. Quit Program
+Enter your choice (1-5):
+1
+Your two random numbers are:
+357 
+432
+What is the sum of these two random numbers?
+
+789
+Congratulations! Thats right! Press any key to continue . . .
+
+//Proof 2
+Menu
+1. Addition Problem
+2. Subtraction Problem
+3. Multiplication Problem
+4. Division Problem
+5. Quit Program
+Enter your choice (1-5):
+2
+Your two random numbers are:
+240 
+69
+----
+What is the difference of these two random numbers?
+171
+Congratulations! Thats right! Press any key to continue . . .
+
+
+//Proof 3
+Menu
+1. Addition Problem
+2. Subtraction Problem
+3. Multiplication Problem
+4. Division Problem
+5. Quit Program
+Enter your choice (1-5):
+3
+Your two random numbers are:
+110
+117 
+----
+What is the product of these two random numbers?
+12870
+Congratulations! Thats right! Press any key to continue . . .
+
+//Proof 4
+Menu
+1. Addition Problem
+2. Subtraction Problem
+3. Multiplication Problem 4. Division Problem
+5. Quit Program
+Enter your choice (1-5):
+4
+Your two random numbers are:
+369
+284 
+----
+What is the quotient of these two random numbers?
+1.299
+Congratulations! Thats right! Press any key to continue . . .
+
+
+//Proof 5
+Menu
+1. Addition Problem
+2. Subtraction Problem
+3. Multiplication Problem
+4. Division Problem
+5. Quit Program
+Enter your choice (1-5):
+5
+Ending the program.
+Press any key to continue . . .
+*/
+
+              
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
