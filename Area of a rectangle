@@ -1,0 +1,34 @@
+/*Student Name: Nichole Francoeur
+* Lab Assignment: Lab2_03
+* Project Name: Area of rectangle
+* File Name: areasOfRectangles.cpp
+* Description: Calculates the area of two rectangles and tells the user if one is bigger or if they are both the same size.
+* Limitations or issues: N/A
+* Credits: None
+*/
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+      double width1,
+             width2,
+             length1,
+             length2;
+             
+      cout << "Enter the width of the first rectangle" << endl;
+      cin >> width1;
+      
+      cout << "Enter the length of the first rectangle" << endl;
+      cin >> length1;
+      
+      cout << "Enter the width of the second rectangle" << endl;
+      cin >> width2;
+      
+      cout << "Enter the length of the second rectangle" << endl;
+      cin >> length2;
+      
+      system("pause");
+      return 0; 
+      }
