@@ -1,0 +1,92 @@
+/*Student Name: Nichole Francoeur * Lab Assignments: Lab4_01
+* Project Name: Book Club Points * File Name:bookClubPoints.cpp
+* Description: Program shows how many points customers earn based on how many books they bought.
+* Limitations or issues: n/a
+* Credits: None
+*/
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+      //points awarded for books bought
+      const double BOOK0 = 0,
+            BOOK1 = 5,
+            BOOK2 = 15,
+            BOOK3 = 30,
+            BOOK4 = 60;
+            
+      //books user bought
+      double bookBought;
+      
+      //asking how many books were bought
+      cout << "How many books did you buy this month?" << endl;
+      cin >> bookBought;
+      
+      // deciding how many points awarded
+      if (bookBought == 0)
+      {
+            cout << "You earned " << BOOK0 << " points." << endl;
+      }
+      else if (bookBought == 1)
+      {
+            cout << "You earned " << BOOK1 << " points." << endl;
+      }
+      else if (bookBought == 2)
+      {
+           cout << "You earned " << BOOK2 << " points." << endl;
+      }
+      else if (bookBought == 3)
+      {
+           cout << "You earned " << BOOK3 << " points." << endl;
+      }
+      else if (bookBought >= 4)
+      {
+      cout << "You earned " << BOOK4 << " points." << endl;
+      }
+      else 
+      {
+      cout << "Please enter a valid number of books bought." << endl;
+      }
+      
+      system("pause");
+      return 0;
+}
+
+/*
+//Proof 1
+How many books did you buy this month? 0
+You earned 0 points.
+Press any key to continue . . .
+
+//Proof 2
+How many books did you buy this month? 1
+You earned 5 points.
+Press any key to continue . . .
+
+//Proof 3
+How many books did you buy this month? 2
+You earned 15 points.
+Press any key to continue . . .
+
+//Proof 4
+How many books did you buy this month? 3
+You earned 30 points.
+Press any key to continue . . .
+
+//Proof 5
+How many books did you buy this month? 4
+You earned 60 points.
+Press any key to continue . . .
+
+//Proof 6
+How many books did you buy this month? 5
+You earned 60 points.
+Press any key to continue . . .
+
+//Proof 7
+How many books did you buy this month?
+-5
+Please enter a valid number of books bought. Press any key to continue . . .
+*/
