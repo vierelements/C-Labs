@@ -1,0 +1,51 @@
+/*
+Student Name: Nichole Francoeur
+Lab Assignment: Lab01
+Project Name: Average Of Values User Input
+File Name:0 averageOfValuesUserInput .cpp
+Description: calculates average of 5 inputted numbers Limitations or issues: Fixed values only no user input. Credits: n/a
+*/
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+      double num1, num2, num3, num4, num5, sum, average;
+
+      cout << "This program calculates the average of 5 numbers." << endl << endl;
+      cout << "Enter five numbers and press the ENTER key after each number:" <<
+endl;
+
+      cin >> num1;
+      cin >> num2;
+      cin >> num3;
+      cin >> num4;
+      cin >> num5;
+      
+      sum = num1 + num2 + num3 + num4 + num5;
+      average = sum / 5;
+      
+      cout << "Numbers entered: " << num1 << "\t" << num2 << "\t" << num3 << "\t"
+           << num4 << "\t" << num5 << endl << endl;
+
+      cout << "The sum of the five numbers is: " << sum << endl << endl;
+      cout << "The average of the five numbers is : " << average << endl << endl;
+      
+      system("pause");
+      return 0; 
+}
+
+/*
+Proof
+This program calculates the average of 5 numbers.
+Enter five numbers and press the ENTER key after each number: 1.1
+2.333
+4.444
+4.444 6.88 1.0001 15.7571
+is : 3.15142
+6.88
+1.0001
+Numbers entered: 1.1
+2.333 The sum of the five numbers is: The average of the five numbers
+Press any key to continue . . . */
