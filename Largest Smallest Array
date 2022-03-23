@@ -1,0 +1,65 @@
+/* Student Name: Nichole Francoeur
+* Lab Assignments: Lab10
+* Project Name: Largest Smallest Array
+* File Name: largestSmallestArray.cpp
+* Description: A program that lets the user enter 5 ints into an array, multiples those values by two and store them into another array.
+* Limitations or issues: none.
+* Credits: None
+*/
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+      // declaring
+      const int USER_NUMBERS = 5; 
+      int numbers[USER_NUMBERS]; 
+      int productNum[USER_NUMBERS]; 
+      int count, product;
+
+      // filling array with user input
+      for (count = 0; count < USER_NUMBERS; count++)
+      {
+            cout << " Enter an integer value:  ";
+            cin >> numbers[count];
+      }
+      
+      cout << " " << endl;
+      cout << "You entered: ";
+      
+      //Looping through array and displaying
+      for (count = 0; count < USER_NUMBERS; count++) 
+      {
+            cout << " " << numbers[count];
+      }
+      
+      cout << " " << endl;
+      
+      cout << "Multiplied by two: ";
+      
+      // looping through array and multiplying
+      for (count = 0; count < USER_NUMBERS; count++)
+      {
+            productNum[count] = numbers[count] * 2;
+      }
+      
+      for (count = 0; count < USER_NUMBERS; count++)
+      {
+            cout << " " << productNum[count];
+      }
+      
+      cout << " " << endl;
+      
+      system("pause");
+      return 0; 
+ }
+        
+/* Proof1
+ Enter an integer value:  10
+ Enter an integer value:  11
+ Enter an integer value:  12
+ Enter an integer value:  13
+ Enter an integer value:  14
+You entered: 10 11 12 13 14 Multiplied by two: 20 22 24 26 28 Press any key to continue . . .
+*/
