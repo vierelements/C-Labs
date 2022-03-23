@@ -1,0 +1,53 @@
+/* Student Name: Nichole Francoeur
+* Lab Assignments: Lab7_01
+* Project Name: Falling Distance
+* File Name: fallingDistance.cpp
+* Description: Program that returns the distance an object falls in seconds.
+* Limitations or issues: none.
+* Credits: None
+*/
+
+#include <iostream>
+#include <math.h> //pow
+#include <iomanip> // manipulators using namespace std;
+
+// function protype
+double fallingDistance(int i);
+
+int main()
+{
+
+cout << "Seconds\t Distance" << endl; cout << "--------------------" << endl;
+
+// loops through 1-10
+for (int i = 1; i <= 10; i++)
+      {
+            fallingDistance(i);
+}
+      system("pause");
+      return 0; 
+}
+
+// calculation of distance
+double fallingDistance(int i) {
+  double const GRAVITY = 9.8;
+  double distanceMeters = .5 * GRAVITY * pow(i,2); std::cout << std::fixed;
+  std::cout << std::setprecision(2);
+  cout << i << "\t" << distanceMeters << " meters" << endl; return 0;
+}
+
+/*
+Proof
+Seconds Distance --------------------
+1 4.90 meters
+2 19.60 meters
+3 44.10 meters
+4 78.40 meters
+5 122.50 meters
+6 176.40 meters
+7 240.10 meters
+8 313.60 meters
+9 396.90 meters
+10 490.00 meters
+Press any key to continue . . .
+*/
