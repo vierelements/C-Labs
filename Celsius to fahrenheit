@@ -1,0 +1,39 @@
+/*Student Name: Nichole Francoeur
+* Lab Assignment: Lab2_02
+* Project Name: Celsius to fahrenheit
+* File Name: celsiusToFahrenheit.cpp
+* Description: This program converts a temperature from Celsius to Fahrenheit.
+* Limitations or issues: N/A
+* Credits: None
+*/
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+      double temp, conversion;
+      
+      cout << "Enter the temperature in Celsuis that you wish to convert" << endl;
+      cin >> temp;
+      
+      conversion = (9.0 / 5.0) * temp + 32;
+      cout << temp << " degrees Celsius is equal to " << conversion << " degrees in Fahrenheit." << endl;
+      
+      system("pause");
+      return 0; 
+}
+
+/*
+* //Proof 1
+* Enter the temperature in Celsuis that you wish to convert 100
+100 degrees Celsius is equal to 212 degrees in Fahrenheit. Press any key to continue . . .
+
+//Proof 2
+Enter the temperature in Celsuis that you wish to convert 0
+0 degrees Celsius is equal to 32 degrees in Fahrenheit. Press any key to continue . . .
+
+//Proof 3
+Enter the temperature in Celsuis that you wish to convert -40
+-40 degrees Celsius is equal to -40 degrees in Fahrenheit. Press any key to continue . . .
+*/
